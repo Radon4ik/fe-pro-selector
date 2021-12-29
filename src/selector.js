@@ -1,10 +1,10 @@
-const object = {
-    test: {
-        myField: {
-            'value string': 'result',
-        },
-    },
-};
+// const object = {
+//     test: {
+//         myField: {
+//             'value string': 'result',
+//         },
+//     },
+// };
 
 
 const selector = (obj, keys) => {
@@ -33,8 +33,8 @@ const selector = (obj, keys) => {
 
 
 
-console.log(selector(object, ['test', 'myField', 'value string'])); // => 'result'
-console.log(selector(object, ['test', 'notExistField', 'value string'])); // => ''
+// console.log(selector(object, ['test', 'myField', 'value string'])); // => 'result'
+// console.log(selector(object, ['test', 'notExistField', 'value string'])); // => ''
 
 
 
