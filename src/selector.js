@@ -1,30 +1,29 @@
-// const object = {
-//     test: {
-//         myField: {
-//             'value string': 'result',
-//         },
-//     },
-// };
+const object = {
+    test: {
+        myField: {
+            'value string': 'result',
+        },
+    },
+};
 
 
 const selector = (obj, keys) => {
     // console.log('аргумент obj принимает Объект =', obj);
     // console.log('аргумент keys принимает массив строк =', keys);
-    let a = obj;
-    // console.log('объект записывается в переменную а =', obj);
-
+    let newObj = obj;
+    // console.log('объект записывается в переменную newObj =', obj);
 
     keys.forEach((item) => {
         // console.log('массив строк попадает в foreach каждая строка попадает в (item)  =', item);
-        if (a[item]) {
-            a = a[item];
-            // console.log('a(объект)+[item](строка) =', a);
+        if (newObj[item]) {
+            newObj = newObj[item];
+            // console.log('newObj(объект)+[item](строка) =', newObj);
         } else {
-            a = " ";
-            // console.log('если строки нет в объекте, то = " возвращает пустую строку "', a);
+            newObj = " ";
+            // console.log('если строки нет в объекте, то = " возвращает пустую строку "', newObj);
         }
     });
-    return a;
+    return newObj;
 
 }
 
@@ -33,10 +32,9 @@ const selector = (obj, keys) => {
 
 
 
-// console.log(selector(object, ['test', 'myField', 'value string'])); // => 'result'
-// console.log(selector(object, ['test', 'notExistField', 'value string'])); // => ''
+console.log(selector(object, ['test', 'myField', 'value string'])); // => 'result'
+console.log(selector(object, ['test', 'notExistField', 'value string'])); // => ''
 
 
 
 module.exports = selector;
-
